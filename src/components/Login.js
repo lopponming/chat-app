@@ -1,9 +1,10 @@
 import React from 'react';
+import './Login.css';
 
 class Login extends React.Component {
     render() {
         return (
-            <div>
+            <div className="loginpage">
                 <h1>login</h1>
             </div>
         );

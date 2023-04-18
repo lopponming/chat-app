@@ -51,12 +51,19 @@
   gap: 0.5rem;
 }
 
+.app ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
 .app input {
   min-width: 30vw;
   border: 1.5px solid #91d0bb;
   border-radius: 5px;
   padding: 0.2rem;
-  background-color: #d9e9ea;
+  background-color: #d6f2ec;
 }
 
 .app button {
