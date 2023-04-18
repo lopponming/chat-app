@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #6078a8;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +35,34 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.app h1 {
+  color: #4d8572;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  background-color: #96c8b7;
+  letter-spacing: 0.5rem;
+}
+
+.app form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.app input {
+  min-width: 30vw;
+  border: 1.5px solid #91d0bb;
+  border-radius: 5px;
+  padding: 0.2rem;
+  background-color: #d9e9ea;
+}
+
+.app button {
+  background-color: #7fae9e;
+  color: #e2f2ff;
+  border: 2px solid #92dac2;
+  border-radius: 5px;
+  padding: 0.3rem;
 }

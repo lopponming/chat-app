@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.main-nav {
+  text-align: right;
+  margin: 1rem;
+  padding: 0 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #2b6451;
+  letter-spacing: 0.1rem;
+}
+
+a:hover {
+  color: #1f4639;
+  /* text-decoration: underline; */
+  background-color: #95bfb0;
+}
+
+.main-nav a {
+  display: inline-block;
+  padding: 1rem 1rem;
+}
