@@ -1,5 +1,12 @@
-.registerpage h1 {
+.auth-container h1 {
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }

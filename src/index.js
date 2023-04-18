@@ -6,16 +6,38 @@ import reportWebVitals from './reportWebVitals';
 import Login from './components/Login';
 import Register from './components/Register';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import firebase, {auth, provider} from './firebase.js';
 
 class AppRouter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {user: null}
+  }
+  componentDidMount() {
+    auth.onAuthStateChanged(user => {
+      if(user){
+        this.setState({user});
+      }
+    })
+  }
+  logOutUser = () => {
+    firebase.auth().signOut()
+    .then(window.location = "/");
+  }
   render() {
     return (
         <Router>
           <div className="app">
             <nav className="main-nav">
-              <Link to="/">home</Link>
-              <Link to="/login">login</Link>
-              <Link to="/register">register</Link>
+              {!this.state.user &&
+                <div>
+                  <Link to="/login">login</Link>
+                  <Link to="/register">register</Link>
+                </div>
+              }
+              {this.state.user &&
+                <a href="#!" onClick={this.logOutUser}>log out</a>
+              }
             </nav>
             <Switch>
               <Route exact path="/" component={App} />
