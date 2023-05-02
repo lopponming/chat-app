@@ -24,7 +24,7 @@ class Chatbox extends React.Component {
                     });
                 }
             }
-            const chats = ascChats.reverse();
+            const chats = ascChats;
             this.setState({chats});
         });
     }
