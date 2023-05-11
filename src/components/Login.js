@@ -29,7 +29,7 @@ class Login extends React.Component {
         const {email, password, error} = this.state;
         return (
             <div className="auth-container">
-                <h1>login</h1>
+                <div className="chat-app-bg"><h1>login</h1></div>
                 <p>login to access your account</p>
                 {error && <p className="error-message">{error.message}</p>}
                 <form onSubmit={this.handleSubmit}>

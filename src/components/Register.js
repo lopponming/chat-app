@@ -36,7 +36,7 @@ class Register extends React.Component {
         const {email, username, password, error} = this.state;
         return (
             <div className="auth-container">
-                <h1>register your account here</h1>
+                <div className="chat-app-bg"><h1>register your account here</h1></div>
                 {error && <p className="error-message">{error.message}</p>}
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor="username">username</label>

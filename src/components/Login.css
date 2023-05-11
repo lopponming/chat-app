@@ -3,3 +3,13 @@
     justify-content: center;
     align-items: center;
 }
+
+.auth-container p {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.auth-container .login-btn {
+    padding: 0 0.5rem;
+}

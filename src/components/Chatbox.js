@@ -1,4 +1,5 @@
 import React from 'react';
+import './Chatbox.css';
 import firebase from '../firebase';
 
 class Chatbox extends React.Component {
@@ -39,7 +40,7 @@ class Chatbox extends React.Component {
                             <li key={chat.id}>
                                 <em>{postDate.getDate() + '/' + (postDate.getMonth()+1)}</em>
                                 <strong>{chat.user}:</strong>
-                                {chat.message}
+                                <p>{chat.message}</p>
                             </li>
                         )
                     })}

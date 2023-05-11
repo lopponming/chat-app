@@ -1,0 +1,39 @@
+.chatbox {
+    margin: 2rem auto;
+    width: 600px;
+    height: 300px;
+    background-color: #6e877f;
+    border-radius: 5px;
+    border: 3px solid #acc0e8;
+    overflow: auto;
+    padding: 1rem;
+}
+
+.chatbox .chat-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chat-list li {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: left;
+}
+
+.chat-list li em {
+    font-size: 0.8rem;
+    color: #9ebab2;
+    margin-bottom: 0.2rem;
+}
+
+.chat-list li strong {
+    font-weight: bold;
+    color: #9ebab2;
+    margin-right: 0.5rem;
+}
+
+.chat-list li p {
+    margin: 0;
+}
