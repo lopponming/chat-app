@@ -52,7 +52,7 @@ class App extends React.Component {
         {!this.props.user &&
           <div className="disallow-chat">
             <p>hallo! ready to go on an adventure?</p>
-            <p><Link to="/login">login</Link> or <Link to="/register">register</Link> to start chatting !! :D</p>
+            <p><Link className="login-btn" to="/login">login</Link> or <Link className="login-btn" to="/register">register</Link> to start chatting !! :D</p>
           </div>
         }
           <div id="circleContainer">

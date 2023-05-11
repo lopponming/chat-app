@@ -15,18 +15,9 @@
   color: white;
 }
 
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .chat-app-bg {
   background-color: #96c8b7;
+  padding: 1rem;
 }
 
 .app h1 {
@@ -71,7 +62,7 @@
 }
 
 .app button:hover {
-  background-color: #6078a8;
+  background-color: #26395c;
 }
 
 /* DISALLOW CHAT */
@@ -118,6 +109,10 @@ div.myCircle1, div.myCircle2, div.myCircle3 {
 div.myCircle1:hover, div.myCircle2:hover, div.myCircle3:hover {
   width: 30px;
   height: 30px;
+}
+
+.disallow-chat .login-btn {
+  padding: 0 0.5rem;
 }
 
 /* FOOTER */

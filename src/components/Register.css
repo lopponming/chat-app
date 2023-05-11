@@ -10,3 +10,15 @@
     justify-content: center;
     align-items: center;
 }
+
+.auth-container .login-btn {
+    padding: 0 0.5rem;
+}
+
+.auth-container .submit {
+    cursor: pointer;
+} 
+
+.chat-app-bg {
+    margin-bottom: 1rem;
+}
