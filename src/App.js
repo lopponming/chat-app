@@ -33,7 +33,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>chat app</h1>
+        <div className="chat-app-bg"><h1>chat app</h1></div>
         {this.props.user &&
           <div className="allow-chat">
             <Chatbox />
@@ -51,9 +51,16 @@ class App extends React.Component {
         }
         {!this.props.user &&
           <div className="disallow-chat">
+            <p>hallo! ready to go on an adventure?</p>
             <p><Link to="/login">login</Link> or <Link to="/register">register</Link> to start chatting !! :D</p>
           </div>
         }
+          <div id="circleContainer">
+            <div className='myCircle1'></div>
+            <div className='myCircle2'></div>
+            <div className='myCircle3'></div>
+          </div>
+          <footer>copyright 2023 miranda klockars</footer>
       </div>
     );
   }

@@ -1,4 +1,6 @@
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -37,11 +39,17 @@
   }
 }
 
-.app h1 {
-  color: #4d8572;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+.chat-app-bg {
   background-color: #96c8b7;
+}
+
+.app h1 {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   letter-spacing: 0.5rem;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(to right, #447866, #8ac0e4);
 }
 
 .app form {
@@ -72,4 +80,58 @@
   border: 2px solid #92dac2;
   border-radius: 5px;
   padding: 0.3rem;
+}
+
+/* DISALLOW CHAT */
+.disallow-chat p {
+  margin: 2rem 0;
+}
+
+#circleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+div.myCircle1 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #acc0e8;
+}
+
+div.myCircle2 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #96c8b7;
+}
+
+div.myCircle3 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #acc2be;
+}
+
+div.myCircle1, div.myCircle2, div.myCircle3 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: width 1s, height 1s;
+}
+
+div.myCircle1:hover, div.myCircle2:hover, div.myCircle3:hover {
+  width: 30px;
+  height: 30px;
+}
+
+/* FOOTER */
+footer {
+  color: #7fa99b;
+  letter-spacing: 0.5rem;
+  font-size: 0.7rem;
+  margin-top: 12rem;
 }
