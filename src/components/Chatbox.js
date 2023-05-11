@@ -2,12 +2,14 @@ import React from 'react';
 import './Chatbox.css';
 import firebase from '../firebase';
 
+
 class Chatbox extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             chats: []
         }
+        this.chatListRef = React.createRef();
     }
     
     componentDidMount(){
@@ -26,14 +28,37 @@ class Chatbox extends React.Component {
                 }
             }
             const chats = ascChats;
-            this.setState({chats});
+            this.setState({chats}, () => {
+                this.scrollToBottom();
+            });
         });
     }
+
+    scrollToBottom = () => {
+        window.requestAnimationFrame(() => {
+          if (this.chatListRef.current) {
+            this.chatListRef.current.lastChild.scrollIntoView();
+          }
+        });
+    };
+
+    addChat = (e) => {
+        e.preventDefault();
+        const chatRef = firebase.database().ref('general');
+        const chat = {
+          message: this.refs.message.value,
+          user: this.props.user.displayName,
+          timestamp: Date.now()
+        };
+        chatRef.push(chat);
+        this.refs.message.value = '';
+        this.scrollToBottom();
+    };
 
     render() {
         return(
             <div className="chatbox">
-                <ul className="chat-list">
+                <ul ref={this.chatListRef} id="chat-list" className="chat-list">
                     {this.state.chats.map(chat => {
                         const postDate = new Date(chat.date);
                         return(

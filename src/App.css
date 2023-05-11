@@ -17,7 +17,6 @@
 
 .chat-app-bg {
   background-color: #96c8b7;
-  padding: 1rem;
 }
 
 .app h1 {
@@ -120,5 +119,5 @@ footer {
   color: #7fa99b;
   letter-spacing: 0.5rem;
   font-size: 0.7rem;
-  margin: 12rem 0 1rem;
+  margin: 9rem 0 1rem;
 }
